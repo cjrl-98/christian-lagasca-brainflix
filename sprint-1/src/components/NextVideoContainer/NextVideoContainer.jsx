@@ -23,8 +23,3 @@ const NextVideoContainer = (props) => {
 }
 
 export default NextVideoContainer;
-
-// props: 
-//     title:
-//     channel:
-//     img: 

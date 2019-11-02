@@ -6,10 +6,9 @@ import viewsIcon from '../../Assets/Icons/SVG/Icon-views.svg';
 import likesIcon from '../../Assets/Icons/SVG/Icon-likes.svg';
 
 const Description = props => {
-        const {id, title, description, channel, image,
-            views,likes,duration,video,timeStamp,comments}= props.descriptionObject;
+        const {title, description, channel,
+            views,likes,timeStamp}= props.descriptionObject;
         
-
         return(
             <section className="description">
                 <div className="description__container">

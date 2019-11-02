@@ -5,17 +5,26 @@ import Header from '../Header/Header'
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import Description from '../Description/Description';
 import NextVideoContainer from '../NextVideoContainer/NextVideoContainer';
+import brainFlixLogo from '../../Assets/Logo/Logo-brainflix.svg';
+import profilePic from "../../Assets/Images/Mohan-muruge.jpg";
+
 
 class MainContent extends React.Component {
+    state= {
+        videoList: data.videoList,
+        mainVideo: data.mainVideo,
+    }
+    
     render(){
+        const updatedVideoList = this.state.videoList.filter(video => video.id !== this.state.mainVideo.id );
         return (
             <React.Fragment>
-                <Header/>
+                <Header logoImg={brainFlixLogo} profilePic={profilePic}/>
                 <div className="main-content">
                     <VideoPlayer/>
                     <div className="main-content__description-container">
-                        <Description descriptionObject={data.mainVideo}/>
-                        <NextVideoContainer videoList={data.videoList}/>
+                        <Description descriptionObject={this.state.mainVideo}/>
+                        <NextVideoContainer videoList={updatedVideoList}/>
                     </div>
                 </div>
             </React.Fragment>
@@ -24,17 +33,3 @@ class MainContent extends React.Component {
 }
 
 export default MainContent;
-
-// 68*4 = 272
-// 24*3 = 72
-
-// 68*6 = 340 
-// 24*5 = 120
-// 460 = description-text-long
-
-//68*8 544
-//24*7 168
-
-
-//68 * 4 272
-//24 * 3 
