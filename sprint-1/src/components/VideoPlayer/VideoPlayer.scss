@@ -1,0 +1,35 @@
+@import "../../Scss/mixin.scss";
+
+.player__container{
+    background-color: #1d1d1d;
+    display: flex;
+    justify-content: center;
+    width:100%; 
+    margin-bottom:32px;
+    @include tablet() {
+       height: 400px;
+       margin-bottom:48px;
+      }
+      @include desk-plus() {
+        height: 540px;
+        margin-bottom:40px;
+      }
+}
+.player__current-vid-container{
+    position: relative;
+    max-width: 425px;
+    @include tablet() {
+        max-width: 768px;
+        width: 700px;
+      }
+      @include desk-plus() {
+        width: 944px;
+        max-width: 1080px;
+      }
+}
+.player__current-vid{
+    height: 100%;
+    width: 100%;
+}
+
+

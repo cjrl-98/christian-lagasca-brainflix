@@ -1,6 +1,5 @@
-@import "../Scss/fonts.scss";
-@import "../Scss/mixin.scss";
-@import "../Scss/variable.scss";
+@import "../../Scss/mixin.scss";
+@import "../../Scss/variable.scss";
 
 .header {
   width: 100%;
@@ -52,7 +51,7 @@
   max-width: 425px;
   border-radius: 5px;
   border: 1px solid rgba(50, 50, 50, 0.5);
-  background-image: url(../Assets/Icons/SVG/Icon-search.svg);
+  background-image: url(../../Assets/Icons/SVG/Icon-search.svg);
   background-repeat: no-repeat;
   background-position: left center;
   background-position-x: 16px;

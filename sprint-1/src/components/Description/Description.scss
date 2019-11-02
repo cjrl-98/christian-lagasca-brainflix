@@ -1,21 +1,20 @@
-@import "../Scss/fonts.scss";
-@import "../Scss/mixin.scss";
-@import "../Scss/variable.scss";
+@import "../../Scss/mixin.scss";
 
 .description{
     display: flex;
     justify-content: center;
     margin: 0 16px;
+    @include tablet() {
+        margin: 0 24px 0 0;
+      }
 }
 .description__container{
     max-width: 425px;
     @include tablet() {
-        max-width: 768px;
-        width: 700px;
+        max-width: 720px;
       }
       @include desk-plus() {
-        width: 944px;
-        max-width: 1080px;
+        width: 712px;
       }
 }
 

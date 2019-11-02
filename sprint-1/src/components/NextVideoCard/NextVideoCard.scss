@@ -1,0 +1,38 @@
+@import "../../Scss/mixin.scss";
+
+.video-card{
+    display: flex;
+    margin-bottom: 24px;
+    max-width: 344px;
+}
+
+.video-card__img{
+    width: 120px;
+    height: 70px;
+    margin-right: 16px;
+    border-radius: 5px;
+}
+.video-card__description{
+    display: flex;
+    flex-direction: column;
+}
+.video-card__title{
+    @include paragraph-mobile();
+    font-weight: 500;
+    margin-bottom: 16px;
+    @include tablet(){
+  
+    }
+}
+
+.video-card__channel{
+    @include paragraph-mobile();
+    max-width: 156px;
+    max-height: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include tablet(){
+        @include paragraph-web()
+    }
+}

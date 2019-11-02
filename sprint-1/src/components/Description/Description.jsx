@@ -2,8 +2,8 @@ import React from 'react';
 
 import './Description.scss';
 
-import viewsIcon from '../Assets/Icons/SVG/Icon-views.svg';
-import likesIcon from '../Assets/Icons/SVG/Icon-likes.svg';
+import viewsIcon from '../../Assets/Icons/SVG/Icon-views.svg';
+import likesIcon from '../../Assets/Icons/SVG/Icon-likes.svg';
 
 
 class Description extends React.Component{

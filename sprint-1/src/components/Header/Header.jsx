@@ -2,8 +2,8 @@ import React from 'react';
 
 import './Header.scss';
 
-import brainFlixLogo from '../Assets/Logo/Logo-brainflix.svg';
-import profilePic from "../Assets/Images/Mohan-muruge.jpg";
+import brainFlixLogo from '../../Assets/Logo/Logo-brainflix.svg';
+import profilePic from "../../Assets/Images/Mohan-muruge.jpg";
 
 
 
