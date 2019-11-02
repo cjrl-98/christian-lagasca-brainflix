@@ -14,7 +14,7 @@ class MainContent extends React.Component {
                 <div className="main-content">
                     <VideoPlayer/>
                     <div className="main-content__description-container">
-                        <Description/>
+                        <Description descriptionObject={data.mainVideo}/>
                         <NextVideoContainer videoList={data.videoList}/>
                     </div>
                 </div>
