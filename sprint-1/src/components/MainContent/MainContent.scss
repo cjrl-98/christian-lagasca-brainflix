@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.main-content__description-container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1080px;
-    @include desk-plus() {
-        flex-direction: row;
+    &__description-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1080px;
+        @include desk-plus() {
+            flex-direction: row;
+        }
     }
 }

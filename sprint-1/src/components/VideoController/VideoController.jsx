@@ -11,7 +11,7 @@ class VideoController extends React.Component{
     render(){
         return(
             <div className="player__controller-container">
-                <div className="player__controller">
+                <div className="player">
                     <button className="player__play-btn"><img src={IconPlay} className="player__btn player__play-icon" alt="play icon"></img></button>
                     <div className="player__controller-center">
                         <div className="player__scrubber"></div>

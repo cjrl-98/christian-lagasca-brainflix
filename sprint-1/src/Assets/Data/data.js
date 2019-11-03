@@ -11,8 +11,8 @@ import videoList8 from '../Images/video-list-8.jpg';
 const videoList = [
     {
         id: '3593c94a-74c5-4d4d-a2c1-e1cabb80ab1a', 
-        title: 'Become a Travel Pro In Easy Lesson', 
-        channel: 'Todd Welch', 
+        title: 'Become a Travel Pro In EasyWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelch Lesson', 
+        channel: 'Todd WelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelchWelch', 
         image: videoList1
     },
     {

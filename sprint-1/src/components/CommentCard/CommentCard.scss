@@ -7,8 +7,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px; // 40px require margin bottom based on mockup
-    //24px was already set for the horizontal rulers
+    margin-bottom: 16px;
     @include desk-plus {
       max-width: 1080px;
     }
@@ -45,7 +44,7 @@
     }
 
     &__card__text--name {
-      word-break: break-word; // ask yash why it behaves this way
+      word-break: break-word; 
       margin-bottom: 16px;
       margin-right: 8px;
       font-weight: bold;
@@ -54,7 +53,7 @@
       opacity: 0.5;
     }
     &__card__text--comment {
-      word-break: break-word; // ask yash why it behaves this way
+      word-break: break-word;
       margin-bottom: 24px;
     }
 
@@ -65,8 +64,8 @@
         justify-content: flex-start;
       }
     }
+    &__card-img{
+      margin-right: 20px;
+    }
 }
 
-.comment__card-img{
-    margin-right: 20px;
-  }
