@@ -72,19 +72,6 @@
     margin-bottom: 0px;
   }
 }
-.nav__add {
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 224px;
-  height: 48px;
-  border-radius: 5px;
-  background-color: $primary-cta-text-link;
-  @include tablet() {
-    width: 94px;
-  }
-}
 .nav__add-icon {
   font-size: 24px;
   text-align: center;

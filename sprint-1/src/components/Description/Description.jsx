@@ -5,9 +5,11 @@ import './Description.scss';
 import viewsIcon from '../../Assets/Icons/SVG/Icon-views.svg';
 import likesIcon from '../../Assets/Icons/SVG/Icon-likes.svg';
 
+import CommentsContainer from '../CommentsContainer/CommentsContainer';
+
 const Description = props => {
         const {title, description, channel,
-            views,likes,timeStamp}= props.descriptionObject;
+            views,likes,timeStamp,comments}= props.descriptionObject;
         
         return(
             <section className="description">
@@ -32,6 +34,7 @@ const Description = props => {
                     <hr className="hr-divider"/>
                     <p className="description__text description__text--long">{description}</p>
                 </div>
+                <CommentsContainer numComments={comments.length}/>
             </section>
         );
     }

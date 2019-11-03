@@ -2,19 +2,14 @@
 
 .description{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     margin: 0 16px;
+    @include tablet(){
+        margin: 0 24px;
+      }
       @include desk-plus(){
         margin: 0 24px 0 0;
-      }
-}
-.description__container{
-    max-width: 425px;
-    @include tablet() {
-        max-width: 720px;
-      }
-      @include desk-plus() {
-        width: 712px;
+        max-width: 712px;
       }
 }
 

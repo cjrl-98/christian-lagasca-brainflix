@@ -3,6 +3,7 @@ import './Header.scss';
 
 import uploadIcon from '../../Assets/Icons/SVG/Icon-upload.svg';
 
+import Button from '../Button/Button';
 
 const Header = props => {
     return(
@@ -14,7 +15,10 @@ const Header = props => {
                 <nav className="header__nav">
                     <input className="nav__search" type="text" placeholder="Search" name="nav__search" required/>
                     <div className="nav__upload-dp">
-                        <button className="nav__add"><span className="nav__add-icon"><img src={uploadIcon}></img></span>Upload</button>
+                        <Button 
+                            text="Upload" 
+                            childNodes={<span className="nav__add-icon"><img src={uploadIcon} alt='button icon'></img></span>}/>
+                        {/* <button className="nav__add"><span className="nav__add-icon"><img src={uploadIcon}></img></span>Upload</button> */}
                         <img className="nav__profile-pic" src={props.profilePic} alt="User Display Pic"></img>
                     </div>
                 </nav>
