@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainContent.scss'
+
 import data from '../../Assets/Data/data';
 import Header from '../Header/Header'
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
