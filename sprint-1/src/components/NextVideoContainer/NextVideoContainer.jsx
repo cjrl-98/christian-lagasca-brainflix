@@ -12,7 +12,6 @@ const NextVideoContainer = (props) => {
         img = {video.image}
         key={video.id}
         />
-        // console.log(video.image)
     );
   return (
     <div className="next-video__container">
