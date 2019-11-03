@@ -93,7 +93,7 @@ const Description = props => {
                     <hr className="hr-divider"/>
                     <p className="description__text description__text--long">{description}</p>
                 </div>
-                <CommentsContainer mainVideo={props.descriptionObject}/>
+                <CommentsContainer mainVideo={props.descriptionObject} channelImg={props.channelImg}/>
             </section>
         );
     }

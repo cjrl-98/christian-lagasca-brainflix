@@ -3,7 +3,7 @@ import './ChannelPhoto.scss';
 
 const ChannelPhoto = props => {
     return (
-        <div className={`comment__img ${props.className}`}></div>
+        <div className={`channel__img-container ${props.className}`}><img className="channel__img" src={props.channelImg} alt={props.alt}/></div>
     );
 }
 

@@ -24,6 +24,10 @@
     @include desk-plus(){
       margin-left: 24px;
     }
+    &__channel-img{
+      margin-top: 28px;
+      align-self: flex-start;
+    }
     &__button {
       @include h2-mobile();
       margin-bottom: 24px;
@@ -73,6 +77,8 @@
       box-shadow: none;
       border: 2px solid #0095FF;
     }
+
+
   }
 
   .comment__form-input {

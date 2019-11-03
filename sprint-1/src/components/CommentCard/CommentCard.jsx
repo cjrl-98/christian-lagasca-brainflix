@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './CommentCard.scss';
+import ChannelPhoto from '../ChannelPhoto/ChannelPhoto';
 
 class CommentCard extends React.Component{
     calculateTimeStamp = timeStamp => { // function to calculate time stamp based on passed timestamp
@@ -67,7 +68,7 @@ class CommentCard extends React.Component{
         return(
             <div className="card-container">
                 <div className="comment__card comment--new">
-                <div className="comment__img comment__card-img"></div>
+                    <ChannelPhoto className="comment__card-img"/>
                     <div className="comment__content">
                         <div className="comment__card__header">
                             <p className="comment__card__text comment__card__text--name">{this.props.comment.name}</p>

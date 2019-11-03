@@ -23,7 +23,7 @@ class MainContent extends React.Component {
                 <div className="main-content">
                     <VideoPlayer/>
                     <div className="main-content__description-container">
-                        <Description descriptionObject={this.state.mainVideo}/>
+                        <Description descriptionObject={this.state.mainVideo} channelImg={profilePic}/>
                         <NextVideoContainer videoList={updatedVideoList}/>
                     </div>
                 </div>
