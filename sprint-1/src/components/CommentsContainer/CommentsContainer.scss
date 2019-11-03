@@ -13,18 +13,7 @@
         @include h2-mobile();
       }
     }
-    &__img{
-        margin-top: 28px;
-        align-self: flex-start;
-        flex-shrink: 0;
-        width: 48px;
-        height: 48px;
-        border-radius: 24px;
-        background-color: #323232;
-    }
   }
-  
-
 
   .form {
     display: flex;

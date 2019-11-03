@@ -76,22 +76,22 @@ const mainVideo = {
     likes: '110,985',
     duration: '0:42',
     video: '',
-    timestamp: 1545109261,
+    timestamp: new Date('December 18 2018'),
     comments: [
         {
             'name': 'Micheal Lyons',
             'comment': 'They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.',
-            'timeStamp': 1542517261
+            'timeStamp': new Date('December 18 2018')
           }, 
           {
             'name': 'Gary Wong',
             'comment': 'Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!',
-            'timeStamp': 1541998861
+            'timeStamp': new Date('December 12 2018')
           },
           {
             'name': 'Theodore Duncan',
             'comment': 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!',
-            'timeStamp': 1539576061
+            'timeStamp': new Date('November 15 2018')
           }
     ]
 };
