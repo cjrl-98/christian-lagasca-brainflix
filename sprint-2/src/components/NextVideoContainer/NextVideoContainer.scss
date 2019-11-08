@@ -1,0 +1,19 @@
+@import "../../Scss/mixin.scss";
+
+.next-video__container{
+    margin: 0 16px;
+    @include tablet(){
+        margin: 0 24px;
+    }
+    @include desk-plus{
+        margin: 0;
+    }
+}
+
+.next-video__title{
+    @include paragraph-mobile();
+    margin: 40px 0;
+    @include tablet(){
+        @include paragraph-web();
+    }
+}

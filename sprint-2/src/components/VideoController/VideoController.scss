@@ -1,0 +1,51 @@
+@import "../../Scss/mixin.scss";
+
+.player__controller-container{
+    position: absolute;
+    width:90%;
+    bottom: 10px;
+    left: 5%;
+    // background-color: lightpink;
+}
+
+.player{
+    display:flex;
+    justify-content: space-between;
+    &__controller-center{
+        flex-grow: 2;
+        width: 100px;
+        background-color: #323232;
+        margin: 0px 8px; 
+        border-radius: 5px;
+    }
+    &__controller-right{
+        display:flex;
+        border:none;
+        border-radius: 5px;
+        background-color: #323232;
+    }
+    
+    &__play-btn{
+        border:none;
+        border-radius: 5px;
+        background-color: #323232;
+        padding: 4px 16px;
+        @include tablet(){
+        padding: 4px 24px; 
+        }
+     }
+     &__play-icon{
+        width: 14px;
+     }
+    
+    &__fullscreen-btn,&__volume-btn{
+        background-color: #323232;
+        border: none;
+        margin:5px;
+    }
+    
+    &__fullscreen-icon,&__volume-icon{
+        width: 16px;
+    }
+    
+}

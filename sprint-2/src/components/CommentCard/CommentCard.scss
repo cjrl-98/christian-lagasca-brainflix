@@ -1,0 +1,71 @@
+@import "../../Scss/mixin.scss";
+@import "../../Scss/variable.scss";
+
+.comment {
+    width: 100%;
+    max-width: 720px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    @include desk-plus {
+      max-width: 1080px;
+    }
+
+    &__card {
+      display: flex;
+      justify-content: space-between;
+      @include tablet() {
+        width: 90%;
+      }
+    }
+    &__title {
+      @include h1-mobile();
+      margin-top: 32px;
+      margin-bottom: 40px;
+      @include tablet() {
+        @include h1-web;
+        margin-bottom: 56px;
+        align-self: flex-start;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    &__card-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__card__text {
+      @include paragraph-mobile();
+    }
+
+    &__card__text--name {
+      word-break: break-word; 
+      margin-bottom: 16px;
+      margin-right: 8px;
+      font-weight: bold;
+    }
+    &__card__text--date {
+      opacity: 0.5;
+    }
+    &__card__text--comment {
+      word-break: break-word;
+      margin-bottom: 24px;
+    }
+
+    &__card__header {
+      display: flex;
+      justify-content: space-between;
+      @include tablet() {
+        justify-content: flex-start;
+      }
+    }
+    &__card-img{
+      margin-right: 20px;
+    }
+}
+
