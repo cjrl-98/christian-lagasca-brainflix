@@ -1,0 +1,14 @@
+@import "../../Scss/mixin.scss";
+
+.upload{
+    max-width: 1080px;
+}
+
+.upload__title{
+    @include h1-mobile();
+    margin-top: 24px;
+    margin-bottom: 32px;
+    @include tablet(){
+        @include h1-web();
+    }
+}

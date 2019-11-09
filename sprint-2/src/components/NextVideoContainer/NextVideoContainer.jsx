@@ -11,6 +11,7 @@ const NextVideoContainer = (props) => {
         channel = {video.channel}
         img = {video.image}
         key={video.id}
+        id={video.id}
         />
     );
   return (

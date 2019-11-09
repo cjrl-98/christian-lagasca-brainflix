@@ -3,6 +3,7 @@ import React from "react";
 import "./CommentsContainer.scss";
 
 import Button from "../Button/Button";
+import FormInput from '../FormInput/FormInput';
 import CommentCard from "../CommentCard/CommentCard";
 import ChannelPhoto from "../ChannelPhoto/ChannelPhoto";
 
@@ -26,19 +27,9 @@ class CommentsContainer extends React.Component {
             channelImg={this.props.channelImg}
             alt={this.props.alt}
           />
-          {/* <form className="comment__form-input">
-            <div className="form">
-              <label className="form__label label">JOIN THE CONVERSATION</label>
-              <textarea
-                className="form__input"
-                type="text"
-                name="comment"
-                placeholder="Write comment here"
-                required
-              ></textarea>
-            </div>
+          <FormInput type="text" name="comment" placeholder="placeholder" label="JOIN THE CONVERSATION">
             <Button className="form__button" text="COMMENT" name="comment" />
-          </form> */}
+          </FormInput>
         </div>
         <hr className="hr-divider" />
         {commentList}

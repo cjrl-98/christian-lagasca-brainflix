@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import './Header.scss';
 
 import uploadIcon from '../../Assets/Icons/SVG/Icon-upload.svg';
+import brainFlixLogo from '../../Assets/Logo/Logo-brainflix.svg';
+import profilePic from "../../Assets/Images/Mohan-muruge.jpg";
 
 import Button from '../Button/Button';
 import ChannelPhoto from '../ChannelPhoto/ChannelPhoto';
@@ -11,7 +15,7 @@ const Header = props => {
         <header className='header'>
             <div className='header__container'>
                 <div className='header__logo-container'>
-                    <a href="/"><img className="header__logo" src={props.logoImg} alt="website logo"/></a>
+                    <Link to="/"><img className="header__logo" src={brainFlixLogo} alt="website logo"/></Link>
                 </div>
                 <nav className="header__nav">
                     <input className="nav__search" type="text" placeholder="Search" name="nav__search" required/>
@@ -21,8 +25,8 @@ const Header = props => {
                             childNodes={<span className="nav__add-icon"><img src={uploadIcon} alt='button icon'></img></span>}/>
                         <ChannelPhoto
                             className="nav__profile-pic"
-                            channelImg={props.profilePic}
-                            alt={props.alt}
+                            channelImg={profilePic}
+                            alt={'profile pic'}
                         />
                     </div>
                 </nav>

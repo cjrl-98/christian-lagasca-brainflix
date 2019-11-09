@@ -1,16 +1,19 @@
 import React from 'react';
 import VideoController from '../VideoController/VideoController';
 import './VideoPlayer.scss';
-import currentVideoPoster from '../../Assets/Images/video-list-0.jpg';
 
 
-class VideoPlayer extends React.Component{
+export default class VideoPlayer extends React.Component{
     render(){
+        if(!this.props.poster){
+            return null
+        }
+        const poster = this.props.poster.image
         return(
             <React.Fragment>
                 <div className="player__container">
                     <div className="player__current-vid-container">
-                        <video className="player__current-vid" poster={currentVideoPoster}>
+                        <video className="player__current-vid" poster={poster}>
                         </video> 
                         <VideoController/>
                     </div>
@@ -20,4 +23,3 @@ class VideoPlayer extends React.Component{
     }
 }
 
-export default VideoPlayer;
