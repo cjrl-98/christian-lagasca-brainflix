@@ -5,7 +5,7 @@ import './FormInput.scss';
 export default class FormInput extends React.Component{
     render(){
         return(
-            <form className="comment__form-input">
+            <form className={`form-input ${this.props.formClass}`}>
                 <div className="form">
                 <label className="form__label label">{this.props.label}</label>
                 <textarea

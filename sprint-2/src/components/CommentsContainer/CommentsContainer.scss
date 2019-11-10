@@ -15,10 +15,15 @@
     }
   }
 
-  .comment__form-input {
+  .comment__form-input{
     display: flex;
     flex-direction: column;
     @include tablet(){
       flex-direction: row;
+      margin-left: 16px;
+    }
+    @include desk-plus(){
+      margin-left: 24px;
     }
   }
+

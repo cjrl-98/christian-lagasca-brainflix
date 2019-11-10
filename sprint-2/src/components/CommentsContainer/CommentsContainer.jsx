@@ -27,7 +27,7 @@ class CommentsContainer extends React.Component {
             channelImg={this.props.channelImg}
             alt={this.props.alt}
           />
-          <FormInput type="text" name="comment" placeholder="placeholder" label="JOIN THE CONVERSATION">
+          <FormInput type="text" name="comment" placeholder="Write comment here" label="JOIN THE CONVERSATION" formClass="comment__form-input">
             <Button className="form__button" text="COMMENT" name="comment" />
           </FormInput>
         </div>

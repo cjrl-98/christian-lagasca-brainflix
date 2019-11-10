@@ -20,9 +20,10 @@ const Header = props => {
                 <nav className="header__nav">
                     <input className="nav__search" type="text" placeholder="Search" name="nav__search" required/>
                     <div className="nav__upload-dp">
-                        <Button 
+                        <Link to="/upload"><Button 
                             text="Upload" 
                             childNodes={<span className="nav__add-icon"><img src={uploadIcon} alt='button icon'></img></span>}/>
+                        </Link>
                         <ChannelPhoto
                             className="nav__profile-pic"
                             channelImg={profilePic}

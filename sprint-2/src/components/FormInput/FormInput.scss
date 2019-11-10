@@ -3,12 +3,6 @@
   .form {
     display: flex;
     flex-direction: column;
-    @include tablet(){
-      margin-left: 16px;
-    }
-    @include desk-plus(){
-      margin-left: 24px;
-    }
     &__channel-img{
       margin-top: 28px;
       align-self: flex-start;
@@ -37,6 +31,7 @@
       }
     }
     &__input {
+      background-color: #FAFAFA;
       height: 48px;
       border: none;
       margin-bottom: 16px;
