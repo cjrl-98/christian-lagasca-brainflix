@@ -5,17 +5,16 @@ import './VideoPlayer.scss';
 
 export default class VideoPlayer extends React.Component{
     render(){
-        if(!this.props.poster){
+        if(!this.props.mainVideo){
             return null
         }
-        const poster = this.props.poster.image
         return(
             <React.Fragment>
                 <div className="player__container">
                     <div className="player__current-vid-container">
-                        <video className="player__current-vid" poster={poster}>
+                        <video className="player__current-vid" poster={this.props.mainVideo.image}>
                         </video> 
-                        <VideoController/>
+                        <VideoController duration={this.props.mainVideo.duration}/>
                     </div>
                 </div>
             </React.Fragment>

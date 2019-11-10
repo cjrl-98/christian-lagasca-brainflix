@@ -55,7 +55,7 @@ export default class MainContent extends React.Component {
         return(
             <React.Fragment>
                     <div className="main-content">
-                        <VideoPlayer poster={this.state.mainVideo}/>
+                        <VideoPlayer mainVideo={this.state.mainVideo}/>
                         <div className="main-content__description-container">
                            <Description descriptionObject={this.state.mainVideo} channelImg={profilePic}/>
                            <NextVideoContainer videoList={updatedVideoList}/>

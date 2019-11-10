@@ -14,7 +14,12 @@ class VideoController extends React.Component{
                 <div className="player">
                     <button className="player__play-btn"><img src={IconPlay} className="player__btn player__play-icon" alt="play icon"></img></button>
                     <div className="player__controller-center">
-                        <div className="player__scrubber"></div>
+                        <div className="player__scrubber">
+                        </div>
+                        <div className="player__duration">
+                            <p><span>0:00</span> / <span>{this.props.duration}</span></p>
+                            
+                        </div>
                     </div>
                     <div className="player__controller-right">
                         <button className="player__fullscreen-btn"><img src={IconFullscreen} className="player__fullscreen-icon" alt="fullscreen icon"></img></button> 
