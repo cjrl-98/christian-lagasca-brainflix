@@ -53,7 +53,7 @@ export default class MainContent extends React.Component {
                     <div className="main-content">
                         <VideoPlayer mainVideo={this.state.mainVideo}/>
                         <div className="main-content__description-container">
-                           <Description renderComments={this.renderComments} descriptionObject={this.state.mainVideo} channelImg={profilePic}/>
+                           <Description renderComments={this.renderComments} videoID={this.props.videoId} descriptionObject={this.state.mainVideo} channelImg={profilePic}/>
                            <NextVideoContainer videoList={updatedVideoList}/>
                         </div>
                     </div>

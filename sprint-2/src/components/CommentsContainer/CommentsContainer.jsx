@@ -1,8 +1,6 @@
 import React from "react";
 import axios from 'axios';
-
 import "./CommentsContainer.scss";
-
 import Button from "../Button/Button";
 import CommentCard from "../CommentCard/CommentCard";
 import ChannelPhoto from "../ChannelPhoto/ChannelPhoto";
@@ -11,14 +9,22 @@ class CommentsContainer extends React.Component {
   state = {
     commentFormRef : React.createRef(),
     comment : '',
-    mainId: this.props.descriptionObject.id,
     componentIsMounted: false
   }
   api_key = '?api_key=c8e5f44e-1121-41f8-adef-3f6c22bdfe01';
   url = 'https://project-2-api.herokuapp.com/';
   videosLink = 'videos';
-  
 
+  deleteComment = (id) => {
+    console.log(`${this.url}videos/${this.props.descriptionObject.id}/comments/${id}${this.api_key}`)
+    axios.delete(`${this.url}videos/${this.props.descriptionObject.id}/comments/${id}${this.api_key}`)
+      .then(response => {
+        this.props.renderComments();
+      })
+      .catch(error => {
+          console.log(error);
+      })
+  }
   postComment = (event) => {
     event.preventDefault();
     const comment = this.state.commentFormRef.current.comment.value;
@@ -26,7 +32,7 @@ class CommentsContainer extends React.Component {
     try{
         axios({ 
           method: 'post',
-          url: `${this.url}${this.videosLink}/${this.state.mainId}/comments${this.api_key}`,
+          url: `${this.url}${this.videosLink}/${this.props.descriptionObject.id}/comments${this.api_key}`,
           data: {
               name: 'BrainStation Man',
               comment: comment
@@ -37,7 +43,6 @@ class CommentsContainer extends React.Component {
         console.log(error);
     }
 }
-
   updateComment = (event) => {
     this.setState({
         [event.target.name] : event.target.value
@@ -45,7 +50,6 @@ class CommentsContainer extends React.Component {
 }
 
   render() {
-    // console.log(this.props.descriptionObject.id)
     //check if props exist
     // return null if no props exist
     if(!this.props.descriptionObject){ 
@@ -53,7 +57,7 @@ class CommentsContainer extends React.Component {
   }
     const descriptionObject = this.props.descriptionObject;
     const commentList = descriptionObject.comments.map(comment => (
-      <CommentCard key={comment.id} comment={comment} />
+      <CommentCard deleteComment={this.deleteComment} key={comment.id} comment={comment} videoId={descriptionObject.id}/>
     ));
     return (
       <section className="comments__container">
