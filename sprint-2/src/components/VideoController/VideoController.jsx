@@ -1,13 +1,10 @@
 import React from 'react';
-
 import IconFullscreen from '../../Assets/Icons/SVG/Icon-fullscreen.svg';
 import IconPlay from '../../Assets/Icons/SVG/Icon-play.svg';
 import IconVolume from '../../Assets/Icons/SVG/Icon-volume.svg';
-
-
 import './VideoController.scss';
 
-class VideoController extends React.Component{
+export default class VideoController extends React.Component{
     render(){
         return(
             <div className="player__controller-container">
@@ -30,5 +27,3 @@ class VideoController extends React.Component{
         );
     }
 }
-
-export default VideoController;
