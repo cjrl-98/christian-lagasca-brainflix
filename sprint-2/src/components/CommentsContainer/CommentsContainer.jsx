@@ -16,7 +16,6 @@ class CommentsContainer extends React.Component {
   videosLink = 'videos';
 
   deleteComment = (id) => {
-    console.log(`${this.url}videos/${this.props.descriptionObject.id}/comments/${id}${this.api_key}`)
     axios.delete(`${this.url}videos/${this.props.descriptionObject.id}/comments/${id}${this.api_key}`)
       .then(response => {
         this.props.renderComments();
@@ -28,7 +27,6 @@ class CommentsContainer extends React.Component {
   postComment = (event) => {
     event.preventDefault();
     const comment = this.state.commentFormRef.current.comment.value;
-    console.log(comment);
     try{
         axios({ 
           method: 'post',
