@@ -1,0 +1,32 @@
+@import "../../Scss/mixin.scss";
+
+  .comment{
+    &__form{
+      display: flex;
+      width: 288px;
+      justify-content: space-between;
+    }
+    &__number{
+      @include h2-mobile();
+      margin-bottom: 32px;
+      @include tablet(){
+        @include h2-mobile();
+      }
+    }
+  }
+
+  .comment__form-input{
+    display: flex;
+    flex-direction: column;
+    @include tablet(){
+      flex-direction: row;
+      margin-left: 16px;
+    }
+    @include desk-plus(){
+      margin-left: 24px;
+    }
+  }
+
+.comment__input-area{
+  padding:16px;
+}

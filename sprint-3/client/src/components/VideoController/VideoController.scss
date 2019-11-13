@@ -1,0 +1,86 @@
+@import "../../Scss/mixin.scss";
+
+.player__controller-container{
+    position: absolute;
+    width:90%;
+    bottom: 10px;
+    left: 5%;
+    // background-color: lightpink;
+}
+
+.player{
+    display:flex;
+    justify-content: space-between;
+    &__controller-center{
+        flex-grow: 2;
+        display: flex;
+        align-items: center;
+        width: 150px;
+        background-color: #323232;
+        margin: 0px 8px; 
+        border-radius: 5px;
+        @include tablet(){
+            width: 519px;
+        }
+        @include desk-plus(){
+            width: 751px;
+        }
+    }
+    &__scrubber{
+        display: flex;
+        align-items: center;
+        height: 2px;
+        width: 100%;
+        background-color: black;
+        margin-left: 8px;
+        @include tablet(){
+            width: 80%;
+        }
+        @include desk-plus(){
+            width: 85%;
+        }
+    }
+    &__duration{
+        @include paragraph-mobile();
+        display:none;
+        @include tablet(){
+            display: flex;
+            margin-left: 16px;
+            color: #ffffff;
+            width: 20%;
+        }
+        @include desk-plus(){
+            width: 15%;
+        }
+    }
+    &__controller-right{
+        display:flex;
+        border:none;
+        border-radius: 5px;
+        background-color: #323232;
+    }
+    
+    &__play-btn{
+        border:none;
+        border-radius: 5px;
+        background-color: #323232;
+        padding: 4px 16px;
+        @include tablet(){
+        padding: 4px 24px; 
+        }
+     }
+     &__play-icon{
+        width: 14px;
+     }
+    
+    &__fullscreen-btn,&__volume-btn{
+        background-color: #323232;
+        border: none;
+        margin:5px;
+    }
+    
+    &__fullscreen-icon,&__volume-icon{
+        width: 16px;
+    }
+    
+}

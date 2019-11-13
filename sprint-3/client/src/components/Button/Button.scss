@@ -1,0 +1,15 @@
+@import "../../Scss/mixin.scss";
+@import "../../Scss/variable.scss";
+.button{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 224px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: $primary-cta-text-link;
+    @include tablet() {
+      width: 94px;
+    }
+  }

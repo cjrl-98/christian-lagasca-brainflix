@@ -1,0 +1,72 @@
+@import "../../Scss/mixin.scss";
+
+.description{
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px;
+    @include tablet(){
+        margin: 0 24px;
+      }
+      @include desk-plus(){
+        margin: 0 24px 0 0;
+        max-width: 712px;
+      }
+    &__title{
+        @include h1-mobile();   
+        margin-bottom: 16px;
+        @include tablet(){
+            margin-bottom: 24px;
+            @include h1-web();
+        }
+    }
+    &__labels{
+        display: flex;
+        flex-direction: column;
+        @include tablet(){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__text{
+        @include paragraph-mobile();
+    }
+    
+    &__uploader{
+        font-size: 16px;
+        line-height: 17px;
+        font-weight: 500;
+        margin-right:8px;
+      
+    }
+    
+    &__text-container{
+        display: flex;
+        margin-right:16px;
+        line-height: 17px;
+        height: 18px;
+    }
+    
+    &__likes-icon{
+        margin-right:8px;
+    }
+    
+    &__views-icon{
+        margin-right:8px;
+    }
+    
+    &__uploader-container{
+        margin-bottom: 32px;
+    }
+    
+    &__text--stats{
+        margin-bottom: 24px;
+    }
+    &__text--long{
+        margin-bottom: 40px;
+        @include tablet(){
+            width: 75%;
+            margin-bottom: 64px;
+        }
+    }
+}
+

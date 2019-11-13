@@ -1,0 +1,101 @@
+@import "../../Scss/mixin.scss";
+
+.upload{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16px;
+    @include tablet(){
+        margin: 0 24px;
+    }
+&__container{
+        width: 100%;
+        @include tablet(){
+            max-width: 768px;
+        }
+        @include desk-plus(){
+            max-width: 1080px;
+        }
+    }
+&-divider{
+    @include tablet(){
+        margin-bottom: 40px;
+    }
+}
+&__title{
+        @include h1-mobile();
+        margin-top: 24px;
+        margin-bottom: 32px;
+        @include tablet(){
+            @include h1-web();
+        }
+    }
+&__thumbnail-title{
+        @include paragraph-mobile();
+        font-weight: 500;
+        margin-bottom: 8px;
+       @include desk-plus(){
+            @include paragraph-web();
+       }
+    }
+    
+&__thumbnail-img{
+        width: 288px;
+        height: 153px;
+        margin-bottom: 40px;
+        @include tablet(){
+           width: 344px; 
+           height: 183px;
+        }
+    }
+&__form-container{
+        @include desk-plus(){
+            display: flex;
+        }
+    }
+&__forms{
+        width: 100%;
+        @include desk-plus(){
+            margin-left: 24px;
+        }
+    }
+&__description-form{
+        height: 143px;
+        @include desk-plus(){
+            height:94px;
+        }
+    }
+&__button-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+        @include tablet(){
+            flex-direction: row;
+            margin-top: 16px;
+            justify-content: flex-end;
+        }
+        @include desk-plus(){
+            max-width: 1080px;
+        }
+    }
+&__cancel-btn{
+        order: 1;
+        background: none;
+        color: #0095FF;
+        width: 95%;
+        @include tablet(){
+            width: initial;
+            order: 0;
+            margin-right: 48px;
+        }
+    }
+&__publish-btn{
+        width: 95%;
+        margin-bottom: 24px;
+        @include tablet(){
+            width: 160px;
+            margin-bottom: 0;
+        }
+    }
+}
