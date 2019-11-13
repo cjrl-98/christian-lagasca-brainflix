@@ -21,7 +21,7 @@ export default class MainContent extends React.Component {
     async getVideos(id) {
         try{
             let response = await axios.get('http://localhost:8080/videos');
-            let fetchedMainVideo = await axios.get(`http://localhost:8080/videos/${id}${this.api_key}`);
+            let fetchedMainVideo = await axios.get(`http://localhost:8080/videos/${id}`);
             if (this.componentIsMounted) {
                 this.setState({
                     videoList: await response.data,
@@ -41,7 +41,11 @@ export default class MainContent extends React.Component {
        this.getVideos(this.props.videoId);
     }
     componentDidUpdate() {
-        if(this.props.videoId !== this.state.mainVideo.id){this.getVideos(this.props.videoId)}
+        if(this.state.mainVideo !== undefined){
+            if(this.props.videoId !== this.state.mainVideo.id){this.getVideos(this.props.videoId)}
+        }else{
+            this.getVideos(this.props.videoId);
+        }
     }
     componentWillUnmount() {
         this.componentIsMounted = false;

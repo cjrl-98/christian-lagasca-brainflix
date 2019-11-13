@@ -70,6 +70,7 @@
     &__card-delete{
       font-size: 13px;
       width:60px;
+      margin-bottom: 8px;
       @include tablet(){
         margin-left:24px;
         width: 150px;

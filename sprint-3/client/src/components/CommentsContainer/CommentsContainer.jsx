@@ -16,7 +16,7 @@ class CommentsContainer extends React.Component {
   videosLink = 'videos';
 
   deleteComment = (id) => {
-    axios.delete(`${this.url}videos/${this.props.descriptionObject.id}/comments/${id}${this.api_key}`)
+    axios.delete(`http://localhost:8080/videos/${this.props.descriptionObject.id}/comments/${id}`)
       .then(response => {
         this.props.renderComments();
       })

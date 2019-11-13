@@ -9,6 +9,7 @@
       }
       @include desk-plus(){
         margin: 0 24px 0 0;
+        min-width: 712px;
         max-width: 712px;
       }
     &__title{
@@ -45,7 +46,9 @@
         line-height: 17px;
         height: 18px;
     }
-    
+    &__likes-icon-btn{
+        background: none;
+    }
     &__likes-icon{
         margin-right:8px;
     }

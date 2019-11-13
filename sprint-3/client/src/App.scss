@@ -39,3 +39,64 @@ button{
 .label{
   opacity: 0.5;
 }
+
+
+// global forms
+.form {
+  display: flex;
+  flex-direction: column;
+  &__channel-img{
+    margin-top: 28px;
+    align-self: flex-start;
+  }
+  &__button {
+    @include h2-mobile();
+    margin-bottom: 24px;
+    align-self: flex-end;
+    height: 48px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    @include tablet(){
+      width: 160px;
+      margin-top: 30px;
+      margin-left: 16px;
+      margin-right: 40px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 8px;
+    @include paragraph-mobile();
+    @include tablet(){
+      @include paragraph-web();
+    }
+  }
+  &__input {
+    background-color: #FAFAFA;
+    height: 48px;
+    border: none;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    padding-top: 16px;
+    padding-left: 16px;
+    min-height: 45px;
+    min-width: 100%;
+    max-width: 436px; //makes the text area controllable by the user but still restrict the width to containers max width
+    border: 1px solid rgba(50, 50, 50, 0.5);
+    @include tablet(){
+      width: 440px;
+    }
+    @include tablet(){
+      width: 436px;
+    }
+  }
+
+  // applies the border based on mockup and design specs when
+  // a user is entering info on a comment input box
+  &__input:focus {
+    outline: none;
+    box-shadow: none;
+    border: 2px solid #0095FF;
+  }
+}
