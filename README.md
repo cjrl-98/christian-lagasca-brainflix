@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to start the site
 
-change directory into sprint 3 
+change directory into sprint 3 <br>
 run : cd sprint-3
 
 start server by changing directory into server folder
