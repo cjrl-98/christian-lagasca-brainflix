@@ -10,13 +10,15 @@ run : cd sprint-3
 start server by changing directory into server folder
 run : cd server
 
-then start up the server with node.js
+run npm install then start up the server with node.js
+run : npm install
 run : node server
 
 start client site by changing directory into client folder
 run : cd client
 
-then start up the client 
+run npm install and then start up the client 
+run : npm install
 run : npm start
 
 
