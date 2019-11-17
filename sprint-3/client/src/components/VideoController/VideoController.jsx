@@ -15,7 +15,6 @@ export default class VideoController extends React.Component{
                         </div>
                         <div className="player__duration">
                             <p><span>0:00</span> / <span>{this.props.duration}</span></p>
-                            
                         </div>
                     </div>
                     <div className="player__controller-right">

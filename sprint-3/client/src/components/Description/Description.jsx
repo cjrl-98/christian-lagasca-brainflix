@@ -8,25 +8,19 @@ import likesIcon from '../../Assets/Icons/SVG/Icon-likes.svg';
 
 import CommentsContainer from '../CommentsContainer/CommentsContainer';
 import CalculateTimeStamp from '../../modules/calculateTimeStamp';
-import { throws } from 'assert';
 
 export default class Description extends React.Component{
 
 state={
     likeColor : '#323232',
-    liked : false
 }
 
 async putLikes(id){
     try{
-        if(this.state.liked){
-            return null;
-        }
         await axios.put(`http://localhost:8080/videos/${id}/likes`);
         this.props.renderComments();
         this.setState({
             ikeColor : 'red',
-            liked : true
         })
     }
     catch(error) {

@@ -12,7 +12,7 @@ export default class VideoPlayer extends React.Component{
             <React.Fragment>
                 <div className="player__container">
                     <div className="player__current-vid-container">
-                        <video className="player__current-vid" poster={this.props.mainVideo.image}>
+                        <video className="player__current-vid" poster={this.props.mainVideo.image} src={this.props.mainVideo.video}>
                         </video> 
                         <VideoController duration={this.props.mainVideo.duration}/>
                     </div>

@@ -7,7 +7,6 @@ app.use(cors());
 app.use(express.json());
 app.use('/videos', videosRoutes);
 
-
 app.listen(8080, () => {
     console.log('server started');
 })

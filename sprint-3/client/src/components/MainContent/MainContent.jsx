@@ -9,8 +9,7 @@ import profilePic from "../../Assets/Images/Mohan-muruge.jpg";
 
 export default class MainContent extends React.Component {
     state= {
-        videoList: [],
-        addedComments: 0
+        videoList: []
     }
 
     api_key = '?api_key=c8e5f44e-1121-41f8-adef-3f6c22bdfe01';

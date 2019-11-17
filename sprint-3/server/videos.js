@@ -1,17 +1,24 @@
 const express = require('express');
 const router = express.Router();
 const nanoid = require('nanoid')
-let videos = require('./data/videos.json');
-let mainVideos = require('./data/mainVideos.json')
+let data = require('./data/data.json')
 
 router.get('/',(request,response) => {
     console.log('GET method got called and responding with send data');
+    const videos = data.map(item => {
+        return x = {
+            "id": item.id,
+            "title": item.title,
+            "channel": item.channel,
+            "image": item.image
+        }
+    });
     response.send(videos);
 })
 
 router.get('/:id', function(request, response) {
     const id = request.params.id;
-    const mainVid = mainVideos.find( item => item.id === id);
+    const mainVid = data.find( item => item.id === id);
     (mainVid !== undefined) ? response.send(mainVid) : res.status(500).send('Something broke!') //if page doesnt exist send error
 });
 
@@ -24,7 +31,7 @@ router.post('/:id/comments', (request,response)=>{
         "timestamp": new Date().getTime()
     }
     const id = request.params.id;
-    const mainVid = mainVideos.find( item => item.id === id);
+    const mainVid = data.find( item => item.id === id);
     mainVid.comments.unshift(newComment);
 });
 
@@ -49,13 +56,12 @@ router.post('/', (request,response)=>{
        "timestamp": new Date().getTime(),
        "comments":[]
     }
-    videos.push(newVideo);
-    mainVideos.push(newMainVid);
+    data.push(newMainVid);
 });
 
 router.delete('/:id/comments/:commentId', (request, response) => {
         const id = request.params.id;
-        let mainVid = mainVideos.find(item => item.id === id);
+        let mainVid = data.find(item => item.id === id);
         const newComments = mainVid.comments.filter( item => item.id !== request.params.commentId);
         mainVid.comments = newComments;
         response.send();
@@ -63,13 +69,12 @@ router.delete('/:id/comments/:commentId', (request, response) => {
 
 router.put('/:id/likes', (request, response) => {
     const id = request.params.id;
-    let mainVid = mainVideos.find(item => item.id === id);
+    let mainVid = data.find(item => item.id === id);
     let likes = parseFloat( mainVid.likes.replace(/,/g, ''));
     console.log(likes);
     likes++;
     mainVid.likes = likes.toLocaleString();
     response.send();
 });
-
 
 module.exports = router;

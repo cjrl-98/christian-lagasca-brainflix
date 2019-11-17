@@ -25,6 +25,10 @@ export default class UploadContainer extends React.Component {
                   title: title,
                   videoDescription: videoDescription
               }})
+              this.setState({
+                videoDescription: "",
+                title: ""
+            })
         }
         catch(error) {
             console.log(error);
