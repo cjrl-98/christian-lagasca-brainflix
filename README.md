@@ -9,35 +9,35 @@ The ”Next Video” list must not contain the current video being displayed.
 The site must be responsive at and between breakpoints, and should closely resemble the mockups in the design package.
 
 # Sprint 2 Requirements <br>
-Clicking the BrainFlix Logo must link back to the home page.
-There must be 3 routes:
-The Home/Video Player Page for displaying the details of a video.
-The Video Upload Page.
-A route which will load the video with the provided video id to be displayed using the Video Player Page.
-Clicking on a video in the “Next Video” list must go to the Video Details Page for the selected video and display all the information for the video such as (likes, views, author, etc).
-Clicking on the “Upload” button must link to the Video Upload Page.
+Clicking the BrainFlix Logo must link back to the home page. <br>
+There must be 3 routes: <br>
+The Home/Video Player Page for displaying the details of a video. <br>
+The Video Upload Page. <br>
+A route which will load the video with the provided video id to be displayed using the Video Player Page.<br> 
+Clicking on a video in the “Next Video” list must go to the Video Details Page for the selected video and display all the information for the video such as (likes, views, author, etc). <br>
+Clicking on the “Upload” button must link to the Video Upload Page. <br>
 
-Posting Comments
-To add another layer of functionality to the site, try adding the ability to post comments. Please refer to the "Diving Deeper" design package for sprint 2 for an ideal visual implementation. Regarding the technical implementation, the following requirements should be met:
+Posting Comments <br>
+To add another layer of functionality to the site, try adding the ability to post comments. Please refer to the "Diving <br> Deeper" design package for sprint 2 for an ideal visual implementation. Regarding the technical implementation, the <br> following requirements should be met: <br>
 
-When posting a comment, ensure that the page does not refresh.
-You must POST a comment to the API.
-If successful in posting the comment, render the new comment by sending a new request for the "Main Video" data.
+When posting a comment, ensure that the page does not refresh. <br>
+You must POST a comment to the API. <br>
+If successful in posting the comment, render the new comment by sending a new request for the "Main Video" data. <br>
 
-# Sprint 3 Requirements
-API Server
-The end-points and response structure of your API server must match that of the mock API server.
-The API must have the following end-points:
-GET /videos that responds with an array of videos.
-GET /videos/:id that responds with an object containing the details of the video with id of :id.
-POST /videos that will add a new video to the video list. A unique id must be generated for each video added.
-Submitting a new video from the form must POST to the API. The user must provide the hard-coded image path for the video thumbnail on the front-end during the form submission.
+# Sprint 3 Requirements <br>
+API Server <br> 
+The end-points and response structure of your API server must match that of the mock API server. <br>
+The API must have the following end-points: <br>
+GET /videos that responds with an array of videos. <br>
+GET /videos/:id that responds with an object containing the details of the video with id of :id. <br>
+POST /videos that will add a new video to the video list. A unique id must be generated for each video added. <br>
+Submitting a new video from the form must POST to the API. The user must provide the hard-coded image path for the video <br> thumbnail on the front-end during the form submission. <br>
 
-Video Upload Page
-With the "Video Upload" page now created, add the actual upload functionality. Specifically, this should include an event handler for the upload form so that when a user submits a new video, it POST’s the video to your API in order to save it to the list of videos.
+Video Upload Page <br>
+With the "Video Upload" page now created, add the actual upload functionality. Specifically, this should include an event <br> handler for the upload form so that when a user submits a new video, it POST’s the video to your API in order to save <br> it to the list of videos.<br>
 
-Liking Videos
-Part 1: Implement a PUT endpoint at /videos/:videoId/likes that increments the like count of the video specified by video. Part 2: Building on the previous task, hook up an event handler to the like button (in the React front-end) to send a PUT request to hit your /videos/:videoId/likes endpoint.
+Liking Videos <br>
+Part 1: Implement a PUT endpoint at /videos/:videoId/likes that increments the like count of the video specified by video. <br> Part 2: Building on the previous task, hook up an event handler to the like button (in the React front-end) to send a <br> PUT request to hit your /videos/:videoId/likes endpoint. <br>
 
 ## Technologies Used 
 React, Express, Node.js, Axios, React Router, SASS
