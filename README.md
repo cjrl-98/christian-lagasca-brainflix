@@ -1,8 +1,30 @@
 # christian-lagasca-brainflix <br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). <br>
+# Sprint 1 Requirements <br>
+The site must closely resemble the mockups and design specs provided in the design package.
+The site must be responsive at all dimensions, including between the provided break-points.
 
-## How to start the site <br>
+# Sprint 2 Requirements <br>
+## Comments Section
+There must be a button that allows a user to add a new comment.
+The user must be able to add their name and a comment.
+The comments must be added such that the newest comments are at the top.
+3 Default comments must be displayed when the page first loads.
+
+# Sprint 3 Requirements
+The Home Page must retrieve comment data from the provided API and display it on the page.
+Users must be able to add new comments that are stored on the back-end using the API.
+New comments that are added must be displayed with the existing comments, the newest comments being at the top.
+The Home Page must not reload when comments are added.
+The Shows Page must display the shows data retrieved from the API.
+
+Comment Delete Functionality
+The API has a DELETE endpoint that you can use to delete comments. Try adding adding a delete button to each comment. When clicked, this button triggers a function that deletes the comment both from the API and also from the DOM. Information about the comment delete endpoint can be found in the API documentation.
+
+## Shows Page
+There must be a song that can be played. The song can be any song you choose.
+
+# How to start the site <br>
 
 change directory into sprint 3 <br>
 run : cd sprint-3 <br>
