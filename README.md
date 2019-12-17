@@ -9,9 +9,11 @@ The ”Next Video” list must not contain the current video being displayed.
 The site must be responsive at and between breakpoints, and should closely resemble the mockups in the design package.
 
 # Sprint 2 Requirements <br>
+
 Clicking the BrainFlix Logo must link back to the home page. <br>
 There must be 3 routes: <br>
 The Home/Video Player Page for displaying the details of a video. <br>
+
 The Video Upload Page. <br>
 A route which will load the video with the provided video id to be displayed using the Video Player Page.<br> 
 Clicking on a video in the “Next Video” list must go to the Video Details Page for the selected video and display all the information for the video such as (likes, views, author, etc). <br>
