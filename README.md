@@ -1,28 +1,46 @@
 # christian-lagasca-brainflix <br>
+# Project Overview
+You have been approached by an entrepreneur to build out a prototype for a new video streaming platform called BrainFlix. The entrepreneur has meetings lined up for funding with several VCs and needs the prototype built within the next three weeks. BrainFlix’s Creative Director has provided you with a package and mockup of how they envision the final product. There is also a separate team that is currently working on a back-end API needed to integrate with the front-end, but for the time being the static components need to be put together.
+
+It will be your job to create a functioning and responsive app prototype from the project designs provided.
 
 # Sprint 1 Requirements <br>
-The site must closely resemble the mockups and design specs provided in the design package.
-The site must be responsive at all dimensions, including between the provided break-points.
+The ”Next Video” list must not contain the current video being displayed.
+The site must be responsive at and between breakpoints, and should closely resemble the mockups in the design package.
 
 # Sprint 2 Requirements <br>
-## Comments Section
-There must be a button that allows a user to add a new comment.
-The user must be able to add their name and a comment.
-The comments must be added such that the newest comments are at the top.
-3 Default comments must be displayed when the page first loads.
+Clicking the BrainFlix Logo must link back to the home page.
+There must be 3 routes:
+The Home/Video Player Page for displaying the details of a video.
+The Video Upload Page.
+A route which will load the video with the provided video id to be displayed using the Video Player Page.
+Clicking on a video in the “Next Video” list must go to the Video Details Page for the selected video and display all the information for the video such as (likes, views, author, etc).
+Clicking on the “Upload” button must link to the Video Upload Page.
+
+Posting Comments
+To add another layer of functionality to the site, try adding the ability to post comments. Please refer to the "Diving Deeper" design package for sprint 2 for an ideal visual implementation. Regarding the technical implementation, the following requirements should be met:
+
+When posting a comment, ensure that the page does not refresh.
+You must POST a comment to the API.
+If successful in posting the comment, render the new comment by sending a new request for the "Main Video" data.
 
 # Sprint 3 Requirements
-The Home Page must retrieve comment data from the provided API and display it on the page.
-Users must be able to add new comments that are stored on the back-end using the API.
-New comments that are added must be displayed with the existing comments, the newest comments being at the top.
-The Home Page must not reload when comments are added.
-The Shows Page must display the shows data retrieved from the API.
+API Server
+The end-points and response structure of your API server must match that of the mock API server.
+The API must have the following end-points:
+GET /videos that responds with an array of videos.
+GET /videos/:id that responds with an object containing the details of the video with id of :id.
+POST /videos that will add a new video to the video list. A unique id must be generated for each video added.
+Submitting a new video from the form must POST to the API. The user must provide the hard-coded image path for the video thumbnail on the front-end during the form submission.
 
-Comment Delete Functionality
-The API has a DELETE endpoint that you can use to delete comments. Try adding adding a delete button to each comment. When clicked, this button triggers a function that deletes the comment both from the API and also from the DOM. Information about the comment delete endpoint can be found in the API documentation.
+Video Upload Page
+With the "Video Upload" page now created, add the actual upload functionality. Specifically, this should include an event handler for the upload form so that when a user submits a new video, it POST’s the video to your API in order to save it to the list of videos.
 
-## Shows Page
-There must be a song that can be played. The song can be any song you choose.
+Liking Videos
+Part 1: Implement a PUT endpoint at /videos/:videoId/likes that increments the like count of the video specified by video. Part 2: Building on the previous task, hook up an event handler to the like button (in the React front-end) to send a PUT request to hit your /videos/:videoId/likes endpoint.
+
+## Technologies Used 
+React, Express, Node.js, Axios, React Router, SASS
 
 # How to start the site <br>
 
